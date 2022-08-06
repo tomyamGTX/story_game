@@ -38,6 +38,7 @@ class LoadProvider extends ChangeNotifier {
   ];
 
   bool finish = false;
+
   changeVal() {
     loading = true;
     if (index + 1 < data.length) {
