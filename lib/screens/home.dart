@@ -181,11 +181,18 @@ class _MyHomePageState extends State<MyHomePage> {
                           Provider.of<LoadProvider>(context, listen: false)
                               .changeVal();
                         }),
-                        child: Card(
-                          color: Colors.amber,
-                          shape: const StadiumBorder(),
+                        child: Container(
+                          margin: const EdgeInsets.all(8),
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).primaryColorLight,
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(
+                                width: 2,
+                                color: Theme.of(context).primaryColorDark),
+                          ),
                           child: Padding(
-                            padding: const EdgeInsets.all(16.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Text(
                               load.data[load.index]['option'][num],
                               style: GoogleFonts.abel(fontSize: 30),

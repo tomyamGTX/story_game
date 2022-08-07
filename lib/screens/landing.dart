@@ -15,9 +15,12 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).primaryColorLight,
       appBar: AppBar(
         title: const Text('Welcome to Story Game'),
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.settings))],
       ),
+      drawer: const Drawer(),
       body: Swiper(
         itemBuilder: (BuildContext context, int index) {
           return InkWell(
@@ -30,7 +33,7 @@ class _LandingPageState extends State<LandingPage> {
                 Spacer(),
                 CircleAvatar(
                   radius: 120,
-                  backgroundColor: Theme.of(context).primaryColorLight,
+                  backgroundColor: Theme.of(context).primaryColor,
                   child: Container(
                     margin: const EdgeInsets.all(8),
                     decoration: const BoxDecoration(
@@ -48,7 +51,7 @@ class _LandingPageState extends State<LandingPage> {
                   decoration: BoxDecoration(
                       border: Border.all(
                           width: 2, color: Theme.of(context).primaryColorDark),
-                      color: Theme.of(context).primaryColorLight,
+                      color: Theme.of(context).primaryColor,
                       borderRadius: BorderRadius.circular(20)),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -56,12 +59,18 @@ class _LandingPageState extends State<LandingPage> {
                       Text(
                         'SPY X FAMILY',
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.abel(fontSize: 40),
+                        style: GoogleFonts.abel(
+                          fontSize: 40,
+                          color: Theme.of(context).primaryColorLight,
+                        ),
                       ),
                       Text(
                         'By Hakimi',
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.abel(fontSize: 30),
+                        style: GoogleFonts.abel(
+                          fontSize: 30,
+                          color: Theme.of(context).primaryColorLight,
+                        ),
                       ),
                     ],
                   ),

@@ -17,8 +17,6 @@ class DialogText extends StatefulWidget {
 }
 
 class _DialogTextState extends State<DialogText> {
-  late bool loading;
-
   @override
   Widget build(BuildContext context) {
     return Consumer<LoadProvider>(builder: (context, load, _) {
@@ -57,15 +55,7 @@ class _DialogTextState extends State<DialogText> {
                                 textStyle: GoogleFonts.adamina(fontSize: 20),
                                 speed: const Duration(milliseconds: 100)),
                         ],
-                        onTap: () {
-                          setState(() {
-                            loading = !loading;
-                            Future.delayed(const Duration(seconds: 3), () {
-                              setState(() {});
-                              loading = !loading;
-                            });
-                          });
-                        },
+                        onTap: () {},
                         onFinished: () {
                           load.visibile();
                         },
