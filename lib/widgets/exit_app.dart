@@ -8,7 +8,10 @@ class exitApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: const Icon(Icons.exit_to_app),
+      icon: Icon(
+        Icons.exit_to_app,
+        size: 40,
+      ),
       onPressed: () async {
         await showDialog(
           context: context,

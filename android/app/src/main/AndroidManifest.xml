@@ -5,7 +5,7 @@
     <application
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:label="dating_game"
+        android:label="Story Game App"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
